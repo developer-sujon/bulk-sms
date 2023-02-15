@@ -33,7 +33,8 @@ const messageCreate = async (req, res, next) => {
         });
 
         const data = await Promise.all(
-          entries.map(async ({ number, description }) => {
+          entries.map(async (item) => {
+            console.log(item);
             return await new Message({
               number: "+8801887878787",
               description: "sdf",
