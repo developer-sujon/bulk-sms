@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "7af4266c-4246-49fc-8583-a14c9178c555",
+		"name": "message",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19667438"
+	},
+	"item": [
+		{
+			"name": "messageCreate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "doc",
+							"type": "file",
+							"src": "/C:/Users/Mohammad Sujon/Downloads/salesmans.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/message/messageCreate",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"message",
+						"messageCreate"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:8080/api/v1",
+			"type": "string"
+		}
+	]
+}
