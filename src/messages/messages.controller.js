@@ -33,11 +33,11 @@ const messageCreate = async (req, res, next) => {
         });
 
         const data = await Promise.all(
-          entries.map(async (item) => {
-            console.log(item);
+          entries.map(async ({number, description}) => {
+            
             return await new Message({
-              number: "+8801887878787",
-              description: "sdf",
+              number,
+              description,
             }).save();
           }),
         );
